@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLespacios-Principal</title>
+    <link rel="stylesheet" href="css/mainstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="img/CLogo.png" alt="CL Espacios Logo" class="logo-image">
+            </a>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Buscar productos...">
+                <button id="search-button"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="hamburger-menu" onclick="showBar()">
+                <div class="hamburger"></div>
+                <div class="hamburger"></div>
+                <div class="hamburger"></div>
+            </div>
+        <div class="barOptions" id="barmenu" style="display: none; position: fixed;">
+            <a href="products.html" class="barOption"><h3>Productos</h3></a>
+            <a href="#about" class="barOption"><h3>Nosotros</h3></a>
+            <a href="#contacto" class="barOption"><h3>Contacto</h3></a>
+            <a href="#" id="CloseOpcID" class="closeBarOpc" style="display: none;" onclick="ExitButtonBar()"></a>
+        </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="products.html">Productos</a></li>
+                    <li><a href="#about">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li>
+                        <div id="cart-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span id="cart-count">0</span>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main id="principal">
+        <section id="hero" class="section slideshow">
+            <div class="slide active" style="background-image: url('https://picsum.photos/220/60');">
+            </div>
+        </section>
+        <section id="about" class="section content-section">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>Acerca de Nosotros</h2>
+                        <p id="about-text-up-text">CL Espacios, fundada por Carolina Gutierrez y Lucas Marín, es una
+                            empresa líder en la
+                            venta de muebles, sillas y cocinas de alta calidad. Nuestra pasión por el diseño y la
+                            funcionalidad nos impulsa a crear espacios que inspiran y mejoran la vida cotidiana de
+                            nuestros clientes.
+                        </p>
+                        <p>Con años de experiencia en el sector, nos enorgullecemos de ofrecer productos que
+                            combinan estilo, comodidad y durabilidad. Desde elegantes sillas hasta cocinas modernas
+                            y funcionales, cada pieza de nuestra colección está diseñada para transformar su hogar
+                            en un espacio único y acogedor.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://picsum.photos/220/60">
+                    </div>
+                </div>
+                <section id="productos-destacados" class="section content-section">
+                    <div class="container">
+                        <h2>Productos Destacados</h2>
+                        <div class="carousel-container">
+                            <button class="carousel-btn left-btn">&#8249;</button>
+                            <div id="product-grid-populate-index" class="product-grid-populate-index">
+
+                            </div>
+                            <button class="carousel-btn right-btn">&#8250;</button>
+                        </div>
+                        <div id="more-products-margin">
+                            <a href="products.html" id="more-products">
+                                <h2>Ver Mas Productos</h2>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CL Espacios</h3>
+                    <p>Transformando espacios, creando hogares desde 2000.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Nosotros</h3>
+                    <div class="footer-margin-polits">
+                        <a href="index.html">
+                            <h4>Quiénes somos</h4>
+                        </a>
+                    </div>
+                    <div class="footer-margin-polits">
+                        <a href="index.html">
+                            <h4>PQRS</h4>
+                        </a>
+                    </div>
+                    <div class="footer-margin-polits">
+                        <a href="index.html">
+                            <h4>Terminos y condiciones</h4>
+                        </a>
+                    </div>
+                    <h3>Politicas</h3>
+                    <div class="footer-margin-polits">
+                        <a href="index.html">
+                            <h4>Política de devolución y reembolso</h4>
+                        </a>
+                    </div>
+                    <div class="footer-margin-polits">
+                        <a href="index.html">
+                            <h4>Política de envios</h4>
+                        </a>
+                    </div>
+                    <div class="footer-margin-polits">
+                        <a href="index.html">
+                            <h4>Garantía de productos</h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p>71198 Av. Carabobo</p>
+                    <p>Teléfono: +57 3042907335</p>
+                    <p>Teléfono: +57 3135886411</p>
+                    <p>Email: clespacios@clespacios.com</p>
+                    <h3>Devoluciones</h3>
+                    <div class="footer-margin-polits">
+                        <a href="index.html">
+                            <h4>Peticion de devolución</h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/galeriacasagrande21/" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CL Espacios. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <a href="https://wa.me/+573135886411" class="whatsapp" target="_blank">
+        <img src="img/whatsapp.png" alt="WhatsApp" width="40">
+    </a>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
