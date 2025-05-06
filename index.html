@@ -19,28 +19,38 @@
         gtag('js', new Date());
         gtag('config', 'G-J9F90B4R6F');
     </script>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href= "./css/style.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="alternate" hreflang="es" href="https://www.clespacios.com/es/" />
-    <link rel="alternate" hreflang="x-default" href="https://www.clespacios.com/" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="alternate" hreflang="es" href="https://clespacios.com/es/" />
+    <link rel="alternate" hreflang="x-default" href="https://clespacios.com/" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    </noscript>
+    <link rel="preload" href="./css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="./css/style.css">
+    </noscript>
 </head>
 
 <body>
     <header>
         <nav>
             <div class="logo-container">
-                <a href="../index.html">
-                <img src="images/logo.png" alt="Clespacios Logo">
+                <a href="/">
+                <img src="./media/logo.png" alt="Clespacios Logo">
             </a></div>
-            <form action="/search" method="get" class="search-form">
+            <form action="./search" method="get" class="search-form">
                 <input type="text" name="search" id="search" placeholder="Search spaces, events, or projects...">
                 <button type="submit"><i class="fas fa-search"></i></button>
             </form>
             <ul class="nav-links">
-                <li><a href="/community">Discover</a></li>
-                <li><a href="/signup">Account</a></li>
-                <li><a href="/pricing">Pricing</a></li>
+                <li><a href="./community">Discover</a></li>
+                <li><a href="./signup">Account</a></li>
+                <li><a href="./pricing">Pricing</a></li>
             </ul>
             <div class="mobile-menu">
                 <i class="fas fa-bars"></i>
@@ -52,14 +62,14 @@
         <!-- Hero Section -->
         <section class="hero">
             <figure class="hero-left">
-                <img src="images/hero-background.jpg" alt="Collaborative digital space">
+                <img src="./media/hero-background.jpg" alt="Collaborative digital space">
                 <div class="hero-content">
                     <h1>🚀 Create your digital space for projects, events, or startups</h1>
                     <p>For just $3 a month, create your page, receive feedback, connect with other creators, and manage
                         your ideas all in one place.</p>
                     <div class="cta-buttons">
-                        <a href="/signup" class="btn primary-btn">Start Now</a>
-                        <a href="/community" class="btn secondary-btn">Explore Community</a>
+                        <a href="./signup" class="btn primary-btn">Start Now</a>
+                        <a href="./community" class="btn secondary-btn">Explore Community</a>
                     </div>
                 </div>
             </figure>
@@ -88,7 +98,7 @@
                 <h2>Get user feedback before launching your app, advertise it. Organize events, attract people, set a deadline.</h2>
             </div>
             <div>
-                <img src="./media/" alt="Image hero">
+                <img src="./media/image_example_use.jpg" alt="Image hero">
             </div>
         </section>
         
@@ -179,7 +189,7 @@
                         <li><i class="fas fa-check"></i> 1 Simple Form</li>
                         <li><i class="fa-solid fa-xmark"></i> Basic Analytics</li>
                     </ul>
-                    <a href="/pricing" class="btn secondary-btn">View Details</a>
+                    <a href="./pricing" class="btn secondary-btn">View Details</a>
                 </div>
                 <div class="pricing-card">
                     <div class="popular-tag">Most Popular</div>
@@ -191,7 +201,7 @@
                         <li><i class="fas fa-check"></i> 5 Simple Forms</li>
                         <li><i class="fas fa-check"></i> Basic Analytics</li>
                     </ul>
-                    <a href="/pricing" class="btn secondary-btn">View Details</a>
+                    <a href="./pricing" class="btn secondary-btn">View Details</a>
                 </div>
                 <div class="pricing-card featured">
                     <h3>Pro Plan</h3>
@@ -203,7 +213,7 @@
                         <li><i class="fas fa-check"></i> Full Analytics</li>
                         <li><i class="fas fa-check"></i> Custom Domain</li>
                     </ul>
-                    <a href="/pricing" class="btn primary-btn">View Details</a>
+                    <a href="./pricing" class="btn primary-btn">View Details</a>
                 </div>
             </div>
         </section>
@@ -296,7 +306,7 @@
 
             <div class="stats-cta">
                 <p>Grow your project with tools that thousands are already using</p>
-                <a href="/signup" class="btn primary-btn">Create Your Space Now</a>
+                <a href="./signup" class="btn primary-btn">Create Your Space Now</a>
             </div>
         </section>
     </main>
@@ -304,59 +314,42 @@
     <footer>
         <div class="footer-content">
             <div class="footer-logo">
-                <img src="images/logo-white.png" alt="Clespacios Logo">
+                <img src="./media/logo-white.png" alt="Clespacios Logo">
                 <p>Your digital space to grow.</p>
             </div>
             <div class="footer-links">
                 <div class="footer-column">
                     <h4>Product</h4>
                     <ul>
-                        <li><a href="/features">Features</a></li>
-                        <li><a href="/pricing">Pricing</a></li>
-                        <li><a href="/updates">Updates</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="/blog">Blog</a></li>
-                        <li><a href="/tutorials">Tutorials</a></li>
-                        <li><a href="/templates">Templates</a></li>
-                        <li><a href="/docs">Documentation</a></li>
+                        <li><a href="./features">Features</a></li>
+                        <li><a href="./pricing">Pricing</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h4>Company</h4>
                     <ul>
-                        <li><a href="/about">About Us</a></li>
-                        <li><a href="/careers">Careers</a></li>
-                        <li><a href="/contact">Contact</a></li>
-                        <li><a href="/press">Press</a></li>
+                        <li><a href="./about">About Us</a></li>
+                        <li><a href="./contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h4>Legal</h4>
                     <ul>
-                        <li><a href="/terms">Terms</a></li>
-                        <li><a href="/privacy">Privacy</a></li>
-                        <li><a href="/cookies">Cookies</a></li>
-                        <li><a href="/security">Security</a></li>
+                        <li><a href="./terms">Terms</a></li>
+                        <li><a href="./cookies">Cookies</a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
             <div class="social-links">
-                <a href="https://twitter.com/clespacios" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://facebook.com/clespacios" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://instagram.com/clespacios" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://linkedin.com/company/clespacios" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+               <a href="https://instagram.com/clespacios" target="_blank"><i class="fab fa-instagram"></i></a>
+               <a href="https://www.tiktok.com/@clespacios" target="_blank"><i class="fab fa-tiktok"></i></a>
             </div>
             <p>&copy; 2025 Clespacios. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="./js/main.js"></script>
 </body>
-
 </html>
