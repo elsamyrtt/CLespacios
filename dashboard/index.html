@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLespacios - Your Digital Space Management Platform</title>
+    <meta name="description"
+        content="Manage your digital spaces, events, and community with CLespacios powerful dashboard">
+    <meta name="keywords" content="digital spaces, events, community management, workspace">
+    <link rel="icon" href="../media/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <nav class="primary-navigation">
+            <div class="logo-container">
+                <a href="../" aria-label="Go to homepage">
+                    <img src="../media/CLespacios-logo-negative.webp" alt="CLespacios Logo" width="180" height="45">
+                </a>
+            </div>
+            <form action="../search" method="get" class="search-form" role="search">
+                <label for="search" class="visually-hidden">Search content</label>
+                <input type="text" name="search" id="search" placeholder="Search spaces, events, or projects..."
+                    aria-label="Search spaces, events, or projects" autocomplete="off">
+                <button type="submit" aria-label="Submit search"><i class="fas fa-search"
+                        aria-hidden="true"></i></button>
+            </form>
+            <ul class="nav-links">
+                <li><a href="../community" aria-label="Discover community spaces">Discover</a></li>
+                <li><a href="../signup" aria-label="Manage your account">Account</a></li>
+                <li><a href="../pricing" aria-label="View pricing plans">Pricing</a></li>
+                <li><a href="../help" aria-label="Get help and support">Support</a></li>
+            </ul>
+            <div class="language-selector">
+                <select name="language" id="language-select" aria-label="Select language">
+                    <option value="en" selected>English</option>
+                    <option value="es">Español</option>
+                    <option value="fr">Français</option>
+                    <option value="de">Deutsch</option>
+                </select>
+            </div>
+            <button class="mobile-menu" aria-label="Toggle menu" aria-expanded="false">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+        </nav>
+    </header>
+
+    <div class="dashboard-container">
+        <!-- Main Sidebar Navigation -->
+        <aside class="dashboard-sidebar">
+            <div class="brand">
+                <img src="../media/CLespacios-logo-negative.webp" alt="CLespacios Logo" class="logo" width="160"
+                    height="40">
+            </div>
+
+            <nav class="sidebar-nav" aria-label="Dashboard navigation">
+                <ul>
+                    <li class="nav-item active">
+                        <a href="./" aria-current="page"><i class="fas fa-home" aria-hidden="true"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./spaces"><i class="fas fa-layer-group" aria-hidden="true"></i> My Spaces</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./events"><i class="fas fa-calendar" aria-hidden="true"></i> Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./forms"><i class="fas fa-clipboard-list" aria-hidden="true"></i> Forms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./feedback"><i class="fas fa-comments" aria-hidden="true"></i> Feedback</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./analytics"><i class="fas fa-chart-line" aria-hidden="true"></i> Analytics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./network"><i class="fas fa-users" aria-hidden="true"></i> Network</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./files"><i class="fas fa-folder" aria-hidden="true"></i> File Manager</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./integrations"><i class="fas fa-plug" aria-hidden="true"></i> Integrations</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="subscription-info">
+                    <span class="plan-badge">Professional Plan</span>
+                    <div class="usage-info">
+                        <div class="storage-bar" aria-label="Storage usage: 45%">
+                            <div class="storage-fill" style="width: 45%"></div>
+                        </div>
+                        <span class="storage-text">4.5GB / 10GB</span>
+                    </div>
+                </div>
+                <a href="./upgrade" class="upgrade-link">Upgrade Plan <i class="fas fa-arrow-right"
+                        aria-hidden="true"></i></a>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="dashboard-main">
+            <!-- Top Header Bar -->
+            <header class="dashboard-header">
+                <div class="breadcrumb">
+                    <a href="./">Dashboard</a> <i class="fas fa-chevron-right" aria-hidden="true"></i> <span>Home</span>
+                </div>
+
+                <div class="search-bar">
+                    <label for="dashboard-search" class="visually-hidden">Search dashboard</label>
+                    <input type="search" id="dashboard-search" placeholder="Search spaces, events or contacts..."
+                        aria-label="Search dashboard content">
+                    <button type="button" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></button>
+                </div>
+
+                <div class="header-actions">
+                    <button class="help-btn" aria-label="Get help">
+                        <i class="fas fa-question-circle" aria-hidden="true"></i>
+                    </button>
+                    <button class="notifications" aria-label="View notifications" aria-haspopup="true">
+                        <i class="fas fa-bell" aria-hidden="true"></i>
+                        <span class="badge" aria-label="3 unread notifications">3</span>
+                    </button>
+                    <div class="user-menu">
+                        <button class="user-menu-toggle" aria-expanded="false" aria-haspopup="true">
+                            <img src="../media/default-avatar.webp" alt="" class="avatar" width="40" height="40">
+                            <span class="username">John Doe</span>
+                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </button>
+                        <div class="dropdown-menu" hidden>
+                            <ul>
+                                <li><a href="./profile"><i class="fas fa-user" aria-hidden="true"></i> My Profile</a>
+                                </li>
+                                <li><a href="./settings"><i class="fas fa-cog" aria-hidden="true"></i> Account
+                                        Settings</a></li>
+                                <li><a href="./billing"><i class="fas fa-credit-card" aria-hidden="true"></i>
+                                        Billing</a></li>
+                                <li class="divider"></li>
+                                <li><a href="../logout"><i class="fas fa-sign-out-alt" aria-hidden="true"></i> Sign
+                                        Out</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Welcome Banner -->
+            <section class="welcome-banner">
+                <div class="banner-content">
+                    <h1>Welcome back, John!</h1>
+                    <p>You have <strong>3 new notifications</strong> and <strong>5 pending tasks</strong> today.</p>
+                </div>
+                <div class="banner-actions">
+                    <button class="primary-btn"><i class="fas fa-calendar-plus" aria-hidden="true"></i> Schedule
+                        Event</button>
+                </div>
+            </section>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-content">
+                <!-- General Summary -->
+                <section class="summary-cards" aria-labelledby="stats-heading">
+                    <h2 id="stats-heading" class="visually-hidden">Dashboard Statistics</h2>
+
+                    <article class="card">
+                        <div class="card-icon"><i class="fas fa-rocket" aria-hidden="true"></i></div>
+                        <div class="card-content">
+                            <h3>Active Spaces</h3>
+                            <p class="number">2</p>
+                            <p class="trend positive">+1 this month</p>
+                        </div>
+                        <a href="./spaces" class="card-link" aria-label="View active spaces"><i
+                                class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-icon"><i class="fas fa-users" aria-hidden="true"></i></div>
+                        <div class="card-content">
+                            <h3>Visitors</h3>
+                            <p class="number">247</p>
+                            <p class="trend positive">+23% vs previous month</p>
+                        </div>
+                        <a href="./analytics/visitors" class="card-link" aria-label="View visitor statistics"><i
+                                class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-icon"><i class="fas fa-comment-dots" aria-hidden="true"></i></div>
+                        <div class="card-content">
+                            <h3>Messages</h3>
+                            <p class="number">18</p>
+                            <p class="trend">5 unread messages</p>
+                        </div>
+                        <a href="./messages" class="card-link" aria-label="View messages"><i class="fas fa-arrow-right"
+                                aria-hidden="true"></i></a>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-icon"><i class="fas fa-calendar-check" aria-hidden="true"></i></div>
+                        <div class="card-content">
+                            <h3>Upcoming Events</h3>
+                            <p class="number">3</p>
+                            <p class="trend">This week</p>
+                        </div>
+                        <a href="./events/upcoming" class="card-link" aria-label="View upcoming events"><i
+                                class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-icon"><i class="fas fa-chart-pie" aria-hidden="true"></i></div>
+                        <div class="card-content">
+                            <h3>Engagement Rate</h3>
+                            <p class="number">43%</p>
+                            <p class="trend positive">+5% vs previous month</p>
+                        </div>
+                        <a href="./analytics/engagement" class="card-link" aria-label="View engagement analytics"><i
+                                class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </article>
+                </section>
+
+                <!-- Progress Trackers -->
+                <section class="progress-trackers">
+                    <h2>Progress Tracking</h2>
+
+                    <div class="progress-grid">
+                        <div class="progress-card">
+                            <div class="progress-info">
+                                <h3>Space Completion</h3>
+                                <p>Complete your space profile to increase visibility</p>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="65">
+                                    <div class="progress-fill" style="width: 65%"></div>
+                                </div>
+                                <span class="progress-text">65%</span>
+                            </div>
+                            <a href="./spaces/edit" class="button-link">Complete Profile</a>
+                        </div>
+
+                        <div class="progress-card">
+                            <div class="progress-info">
+                                <h3>Network Growth</h3>
+                                <p>Monthly target: 50 new contacts</p>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" aria-valuemin="0" aria-valuemax="50" aria-valuenow="32">
+                                    <div class="progress-fill" style="width: 64%"></div>
+                                </div>
+                                <span class="progress-text">32/50</span>
+                            </div>
+                            <a href="./network/grow" class="button-link">Grow Network</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Main Dashboard Grid -->
+                <div class="dashboard-grid">
+                    <!-- Recent Activity -->
+                    <section class="recent-activity" aria-labelledby="activity-heading">
+                        <div class="section-header">
+                            <h2 id="activity-heading">Recent Activity</h2>
+                            <a href="./activity" class="view-all">View All <i class="fas fa-arrow-right"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                        <div class="activity-list">
+                            <article class="activity-item">
+                                <div class="activity-icon"><i class="fas fa-user-plus" aria-hidden="true"></i></div>
+                                <div class="activity-details">
+                                    <p>New follower on your space "My Startup"</p>
+                                    <div class="activity-meta">
+                                        <time datetime="2025-05-17T13:45:00">5 minutes ago</time>
+                                        <span class="activity-category">Network</span>
+                                    </div>
+                                </div>
+                                <button class="activity-action" aria-label="View activity details"><i
+                                        class="fas fa-ellipsis-v" aria-hidden="true"></i></button>
+                            </article>
+
+                            <article class="activity-item">
+                                <div class="activity-icon"><i class="fas fa-comment" aria-hidden="true"></i></div>
+                                <div class="activity-details">
+                                    <p>New comment on your event "Beta Launch"</p>
+                                    <p class="comment-preview">"This looks amazing! Can't wait to attend the event and
+                                        see the new features..."</p>
+                                    <div class="activity-meta">
+                                        <time datetime="2025-05-17T11:50:00">2 hours ago</time>
+                                        <span class="activity-category">Events</span>
+                                    </div>
+                                </div>
+                                <button class="activity-action" aria-label="View activity details"><i
+                                        class="fas fa-ellipsis-v" aria-hidden="true"></i></button>
+                            </article>
+
+                            <article class="activity-item">
+                                <div class="activity-icon"><i class="fas fa-heart" aria-hidden="true"></i></div>
+                                <div class="activity-details">
+                                    <p>5 people favorited your project</p>
+                                    <div class="user-avatars">
+                                        <img src="../media/avatar-1.webp" alt="" width="24" height="24">
+                                        <img src="../media/avatar-2.webp" alt="" width="24" height="24">
+                                        <img src="../media/avatar-3.webp" alt="" width="24" height="24">
+                                        <span class="avatar-more">+2</span>
+                                    </div>
+                                    <div class="activity-meta">
+                                        <time datetime="2025-05-16T14:30:00">Yesterday</time>
+                                        <span class="activity-category">Projects</span>
+                                    </div>
+                                </div>
+                                <button class="activity-action" aria-label="View activity details"><i
+                                        class="fas fa-ellipsis-v" aria-hidden="true"></i></button>
+                            </article>
+
+                            <article class="activity-item">
+                                <div class="activity-icon"><i class="fas fa-eye" aria-hidden="true"></i></div>
+                                <div class="activity-details">
+                                    <p>Your space "Creative Lab" reached 100 views</p>
+                                    <div class="activity-meta">
+                                        <time datetime="2025-05-16T09:15:00">Yesterday</time>
+                                        <span class="activity-category">Spaces</span>
+                                    </div>
+                                </div>
+                                <button class="activity-action" aria-label="View activity details"><i
+                                        class="fas fa-ellipsis-v" aria-hidden="true"></i></button>
+                            </article>
+
+                            <article class="activity-item">
+                                <div class="activity-icon"><i class="fas fa-certificate" aria-hidden="true"></i></div>
+                                <div class="activity-details">
+                                    <p>Your space was featured in the community spotlight</p>
+                                    <div class="activity-meta">
+                                        <time datetime="2025-05-15T16:20:00">2 days ago</time>
+                                        <span class="activity-category">Recognition</span>
+                                    </div>
+                                </div>
+                                <button class="activity-action" aria-label="View activity details"><i
+                                        class="fas fa-ellipsis-v" aria-hidden="true"></i></button>
+                            </article>
+                        </div>
+                    </section>
+
+                    <!-- Upcoming Events -->
+                    <section class="upcoming-events" aria-labelledby="events-heading">
+                        <div class="section-header">
+                            <h2 id="events-heading">Upcoming Events</h2>
+                            <a href="./events" class="view-all">View All <i class="fas fa-arrow-right"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                        <div class="events-list">
+                            <article class="event-item">
+                                <div class="event-date">
+                                    <span class="day">15</span>
+                                    <span class="month">MAY</span>
+                                </div>
+                                <div class="event-details">
+                                    <div class="event-tag">Featured</div>
+                                    <h3>Product Launch</h3>
+                                    <p>Official presentation of the beta version</p>
+                                    <div class="event-meta">
+                                        <span class="event-time"><i class="fas fa-clock" aria-hidden="true"></i> 2:00 PM
+                                            - 4:00 PM</span>
+                                        <span class="event-location"><i class="fas fa-map-marker-alt"
+                                                aria-hidden="true"></i> Virtual Event</span>
+                                    </div>
+                                    <div class="event-footer">
+                                        <span class="participants"><i class="fas fa-user-friends"
+                                                aria-hidden="true"></i> 12 participants</span>
+                                        <a href="./events/product-launch" class="event-link">Details</a>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="event-item">
+                                <div class="event-date">
+                                    <span class="day">20</span>
+                                    <span class="month">MAY</span>
+                                </div>
+                                <div class="event-details">
+                                    <h3>Feedback Session</h3>
+                                    <p>Meeting with early adopters</p>
+                                    <div class="event-meta">
+                                        <span class="event-time"><i class="fas fa-clock" aria-hidden="true"></i> 10:00
+                                            AM - 11:30 AM</span>
+                                        <span class="event-location"><i class="fas fa-map-marker-alt"
+                                                aria-hidden="true"></i> Conference Room A</span>
+                                    </div>
+                                    <div class="event-footer">
+                                        <span class="participants"><i class="fas fa-user-friends"
+                                                aria-hidden="true"></i> 8 participants</span>
+                                        <a href="./events/feedback-session" class="event-link">Details</a>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="event-item">
+                                <div class="event-date">
+                                    <span class="day">25</span>
+                                    <span class="month">MAY</span>
+                                </div>
+                                <div class="event-details">
+                                    <h3>Networking Mixer</h3>
+                                    <p>Connect with industry professionals</p>
+                                    <div class="event-meta">
+                                        <span class="event-time"><i class="fas fa-clock" aria-hidden="true"></i> 6:00 PM
+                                            - 8:30 PM</span>
+                                        <span class="event-location"><i class="fas fa-map-marker-alt"
+                                                aria-hidden="true"></i> Innovation Hub</span>
+                                    </div>
+                                    <div class="event-footer">
+                                        <span class="participants"><i class="fas fa-user-friends"
+                                                aria-hidden="true"></i> 35 participants</span>
+                                        <a href="./events/networking-mixer" class="event-link">Details</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Additional Dashboard Sections -->
+                <div class="dashboard-grid three-columns">
+                    <!-- Tasks & To-Do List -->
+                    <section class="tasks-todo">
+                        <div class="section-header">
+                            <h2>Tasks & To-Do</h2>
+                            <a href="./tasks" class="view-all">View All <i class="fas fa-arrow-right"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                        <div class="task-filters">
+                            <button class="task-filter active" data-filter="all">All</button>
+                            <button class="task-filter" data-filter="today">Today</button>
+                            <button class="task-filter" data-filter="upcoming">Upcoming</button>
+                        </div>
+                        <ul class="task-list">
+                            <li class="task-item completed">
+                                <label class="task-checkbox">
+                                    <input type="checkbox" checked>
+                                    <span class="checkmark"></span>
+                                    <span class="task-text">Create project timeline</span>
+                                </label>
+                                <span class="task-date">Completed yesterday</span>
+                            </li>
+                            <li class="task-item">
+                                <label class="task-checkbox">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    <span class="task-text">Prepare presentation slides</span>
+                                </label>
+                                <span class="task-priority high">High</span>
+                                <span class="task-date">Due today</span>
+                            </li>
+                            <li class="task-item">
+                                <label class="task-checkbox">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    <span class="task-text">Review feedback survey results</span>
+                                </label>
+                                <span class="task-priority medium">Medium</span>
+                                <span class="task-date">Due tomorrow</span>
+                            </li>
+                            <li class="task-item">
+                                <label class="task-checkbox">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    <span class="task-text">Update team on project progress</span>
+                                </label>
+                                <span class="task-date">Due May 19</span>
+                            </li>
+                            <li class="task-item">
+                                <label class="task-checkbox">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    <span class="task-text">Schedule follow-up meetings</span>
+                                </label>
+                                <span class="task-date">Due May 22</span>
+                            </li>
+                        </ul>
+                        <button class="add-task-btn"><i class="fas fa-plus" aria-hidden="true"></i> Add New
+                            Task</button>
+                    </section>
+
+                    <!-- Messages Preview -->
+                    <section class="messages-preview">
+                        <div class="section-header">
+                            <h2>Recent Messages</h2>
+                            <a href="./messages" class="view-all">View All <i class="fas fa-arrow-right"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                        <ul class="message-list">
+                            <li class="message-item unread">
+                                <div class="message-sender">
+                                    <img src="../media/avatar-3.webp" alt="" class="sender-avatar" width="40"
+                                        height="40">
+                                    <div class="sender-info">
+                                        <h4>Sarah Johnson</h4>
+                                        <span class="message-time">10:23 AM</span>
+                                    </div>
+                                </div>
+                                <p class="message-preview">Hi there! I wanted to discuss the upcoming project
+                                    collaboration and schedule a...</p>
+                            </li>
+                            <li class="message-item unread">
+                                <div class="message-sender">
+                                    <img src="../media/avatar-2.webp" alt="" class="sender-avatar" width="40"
+                                        height="40">
+                                    <div class="sender-info">
+                                        <h4>David Chen</h4>
+                                        <span class="message-time">Yesterday</span>
+                                    </div>
+                                </div>
+                                <p class="message-preview">Thanks for sending over the files. I've reviewed them and
+                                    have some feedback on the...</p>
+                            </li>
+                            <li class="message-item">
+                                <div class="message-sender">
+                                    <img src="../media/avatar-4.webp" alt="" class="sender-avatar" width="40"
+                                        height="40">
+                                    <div class="sender-info">
+                                        <h4>Marketing Team</h4>
+                                        <span class="message-time">2 days ago</span>
+                                    </div>
+                                </div>
+                                <p class="message-preview">The new promotional materials are ready for your review.
+                                    Please let us know if...</p>
+                            </li>
+                        </ul>
+                        <a href="./messages/new" class="compose-btn"><i class="fas fa-pen" aria-hidden="true"></i>
+                            Compose Message</a>
+                    </section>
+
+                    <!-- Popular Content -->
+                    <section class="popular-content">
+                        <div class="section-header">
+                            <h2>Popular Content</h2>
+                            <a href="./analytics/content" class="view-all">View All <i class="fas fa-arrow-right"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                        <ul class="content-list">
+                            <li class="content-item">
+                                <div class="content-type"><i class="fas fa-file-alt" aria-hidden="true"></i></div>
+                                <div class="content-info">
+                                    <h4>Product Overview</h4>
+                                    <div class="content-meta">
+                                        <span class="views">127 views</span>
+                                        <span class="downloads">43 downloads</span>
+                                    </div>
+                                </div>
+                                <div class="content-trend">
+                                    <i class="fas fa-chart-line" aria-hidden="true"></i>
+                                    <span>+12%</span>
+                                </div>
+                            </li>
+                            <li class="content-item">
+                                <div class="content-type"><i class="fas fa-video" aria-hidden="true"></i></div>
+                                <div class="content-info">
+                                    <h4>Tutorial: Getting Started</h4>
+                                    <div class="content-meta">
+                                        <span class="views">89 views</span>
+                                        <span class="watch-time">Avg. 4:12 min</span>
+                                    </div>
+                                </div>
+                                <div class="content-trend">
+                                    <i class="fas fa-chart-line" aria-hidden="true"></i>
+                                    <span>+8%</span>
+                                </div>
+                            </li>
+                            <li class="content-item">
+                                <div class="content-type"><i class="fas fa-file-image" aria-hidden="true"></i></div>
+                                <div class="content-info">
+                                    <h4>Brand Guidelines</h4>
+                                    <div class="content-meta">
+                                        <span class="views">74 views</span>
+                                        <span class="downloads">26 downloads</span>
+                                    </div>
+                                </div>
+                                <div class="content-trend">
+                                    <i class="fas fa-chart-line" aria-hidden="true"></i>
+                                    <span>+5%</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+
+                <!-- Analytics Overview -->
+                <section class="analytics-overview">
+                    <div class="section-header">
+                        <h2>Analytics Overview</h2>
+                        <div class="time-range-selector">
+                            <button class="range-btn active">Week</button>
+                            <button class="range-btn">Month</button>
+                            <button class="range-btn">Quarter</button>
+                            <button class="range-btn">Year</button>
+                        </div>
+                    </div>
+
+                    <div class="analytics-grid">
+                        <div class="analytics-chart visitors-chart">
+                            <h3>Visitor Traffic</h3>
+                            <div class="chart-placeholder">
+                                <img src="/api/placeholder/600/300" alt="Visitor traffic chart placeholder" />
+                            </div>
+                            <div class="chart-legend">
+                                <div class="legend-item">
+                                    <span class="legend-color" style="background-color: #a0a0a0;"></span>
+                                    <span class="legend-label">Previous Period</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="analytics-chart engagement-chart">
+                            <h3>Engagement Metrics</h3>
+                            <div class="chart-placeholder">
+                                <img src="/api/placeholder/600/300" alt="Engagement metrics chart placeholder" />
+                            </div>
+                            <div class="metrics-summary">
+                                <div class="metric-item">
+                                    <span class="metric-label">Avg. Time on Page</span>
+                                    <span class="metric-value">3:42</span>
+                                    <span class="metric-trend positive">+12%</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-label">Interaction Rate</span>
+                                    <span class="metric-value">27%</span>
+                                    <span class="metric-trend positive">+3%</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-label">Bounce Rate</span>
+                                    <span class="metric-value">18%</span>
+                                    <span class="metric-trend negative">-5%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="analytics-insights">
+                        <h3>Key Insights</h3>
+                        <ul class="insights-list">
+                            <li class="insight-item">
+                                <i class="fas fa-lightbulb" aria-hidden="true"></i>
+                                <div class="insight-content">
+                                    <p>Your most active time period is <strong>Tuesdays between 2-4 PM</strong>.
+                                        Consider scheduling important updates during this time.</p>
+                                </div>
+                            </li>
+                            <li class="insight-item">
+                                <i class="fas fa-lightbulb" aria-hidden="true"></i>
+                                <div class="insight-content">
+                                    <p>Users spend 45% more time on pages with embedded videos. Consider adding more
+                                        video content.</p>
+                                </div>
+                            </li>
+                            <li class="insight-item">
+                                <i class="fas fa-lightbulb" aria-hidden="true"></i>
+                                <div class="insight-content">
+                                    <p>Mobile traffic has increased by 28% this month. Ensure all content is fully
+                                        optimized for mobile devices.</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="./analytics/insights" class="view-all-insights">View All Insights <i
+                                class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </section>
+
+                <!-- Quick Actions -->
+                <section class="quick-actions" aria-labelledby="actions-heading">
+                    <h2 id="actions-heading">Quick Actions</h2>
+                    <div class="actions-grid">
+                        <button class="action-btn">
+                            <div class="action-icon"><i class="fas fa-plus-circle" aria-hidden="true"></i></div>
+                            <span class="action-label">New Space</span>
+                            <span class="action-description">Create a new collaborative workspace</span>
+                        </button>
+
+                        <button class="action-btn">
+                            <div class="action-icon"><i class="fas fa-calendar-plus" aria-hidden="true"></i></div>
+                            <span class="action-label">Create Event</span>
+                            <span class="action-description">Schedule a new meeting or workshop</span>
+                        </button>
+
+                        <button class="action-btn">
+                            <div class="action-icon"><i class="fas fa-file-alt" aria-hidden="true"></i></div>
+                            <span class="action-label">New Form</span>
+                            <span class="action-description">Design feedback or data collection forms</span>
+                        </button>
+
+                        <button class="action-btn">
+                            <div class="action-icon"><i class="fas fa-share-alt" aria-hidden="true"></i></div>
+                            <span class="action-label">Share</span>
+                            <span class="action-description">Share your spaces with collaborators</span>
+                        </button>
+
+                        <button class="action-btn">
+                            <div class="action-icon"><i class="fas fa-upload" aria-hidden="true"></i></div>
+                            <span class="action-label">Upload Content</span>
+                            <span class="action-description">Add new documents, images or videos</span>
+                        </button>
+
+                        <button class="action-btn">
+                            <div class="action-icon"><i class="fas fa-bell" aria-hidden="true"></i></div>
+                            <span class="action-label">Set Reminder</span>
+                            <span class="action-description">Schedule notifications for important events</span>
+                        </button>
+
+                        <button class="action-btn">
+                            <div class="action-icon"><i class="fas fa-users" aria-hidden="true"></i></div>
+                            <span class="action-label">Invite Members</span>
+                            <span class="action-description">Grow your collaborative network</span>
+                        </button>
+
+                        <button class="action-btn">
+                            <div class="action-icon"><i class="fas fa-cog" aria-hidden="true"></i></div>
+                            <span class="action-label">Customize</span>
+                            <span class="action-description">Personalize your dashboard view</span>
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Your Spaces Overview -->
+                <section class="spaces-overview">
+                    <div class="section-header">
+                        <h2>Your Spaces</h2>
+                        <a href="./spaces" class="view-all">View All <i class="fas fa-arrow-right"
+                                aria-hidden="true"></i></a>
+                    </div>
+
+                    <div class="spaces-carousel">
+                        <button class="carousel-nav prev" aria-label="Previous spaces"><i class="fas fa-chevron-left"
+                                aria-hidden="true"></i></button>
+
+                        <div class="spaces-grid">
+                            <article class="space-card featured">
+                                <div class="space-header">
+                                    <span class="featured-tag">Featured</span>
+                                    <img src="../media/space-cover-1.webp" alt="My Startup space cover image"
+                                        class="space-cover">
+                                    <div class="space-actions">
+                                        <button aria-label="Edit space"><i class="fas fa-edit"
+                                                aria-hidden="true"></i></button>
+                                        <button aria-label="Space settings"><i class="fas fa-cog"
+                                                aria-hidden="true"></i></button>
+                                        <button aria-label="More options"><i class="fas fa-ellipsis-v"
+                                                aria-hidden="true"></i></button>
+                                    </div>
+                                </div>
+                                <div class="space-content">
+                                    <h3 class="space-title">My Startup</h3>
+                                    <p class="space-description">Workspace for our product development and team
+                                        collaboration</p>
+                                    <div class="space-stats">
+                                        <div class="stat-item">
+                                            <i class="fas fa-eye" aria-hidden="true"></i>
+                                            <span>152 views</span>
+                                        </div>
+                                        <div class="stat-item">
+                                            <i class="fas fa-user-friends" aria-hidden="true"></i>
+                                            <span>8 members</span>
+                                        </div>
+                                        <div class="stat-item">
+                                            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                                            <span>2 events</span>
+                                        </div>
+                                    </div>
+                                    <div class="space-members">
+                                        <div class="member-avatars">
+                                            <img src="../media/avatar-1.webp" alt="" width="32" height="32">
+                                            <img src="../media/avatar-2.webp" alt="" width="32" height="32">
+                                            <img src="../media/avatar-3.webp" alt="" width="32" height="32">
+                                            <span class="avatar-more">+5</span>
+                                        </div>
+                                        <a href="./spaces/my-startup/manage-members" class="manage-members">Manage</a>
+                                    </div>
+                                </div>
+                                <div class="space-footer">
+                                    <a href="./spaces/my-startup" class="view-space-btn">View Space</a>
+                                </div>
+                            </article>
+
+                            <article class="space-card">
+                                <div class="space-header">
+                                    <img src="../media/space-cover-2.webp" alt="Creative Lab space cover image"
+                                        class="space-cover">
+                                    <div class="space-actions">
+                                        <button aria-label="Edit space"><i class="fas fa-edit"
+                                                aria-hidden="true"></i></button>
+                                        <button aria-label="Space settings"><i class="fas fa-cog"
+                                                aria-hidden="true"></i></button>
+                                        <button aria-label="More options"><i class="fas fa-ellipsis-v"
+                                                aria-hidden="true"></i></button>
+                                    </div>
+                                </div>
+                                <div class="space-content">
+                                    <h3 class="space-title">Creative Lab</h3>
+                                    <p class="space-description">Platform for brainstorming design ideas and creative
+                                        concepts</p>
+                                    <div class="space-stats">
+                                        <div class="stat-item">
+                                            <i class="fas fa-eye" aria-hidden="true"></i>
+                                            <span>95 views</span>
+                                        </div>
+                                        <div class="stat-item">
+                                            <i class="fas fa-user-friends" aria-hidden="true"></i>
+                                            <span>4 members</span>
+                                        </div>
+                                        <div class="stat-item">
+                                            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                                            <span>1 event</span>
+                                        </div>
+                                    </div>
+                                    <div class="space-members">
+                                        <div class="member-avatars">
+                                            <img src="../media/avatar-2.webp" alt="" width="32" height="32">
+                                            <img src="../media/avatar-4.webp" alt="" width="32" height="32">
+                                            <img src="../media/avatar-5.webp" alt="" width="32" height="32">
+                                            <span class="avatar-more">+1</span>
+                                        </div>
+                                        <a href="./spaces/creative-lab/manage-members" class="manage-members">Manage</a>
+                                    </div>
+                                </div>
+                                <div class="space-footer">
+                                    <a href="./spaces/creative-lab" class="view-space-btn">View Space</a>
+                                </div>
+                            </article>
+
+                            <article class="space-card new-space">
+                                <div class="new-space-content">
+                                    <div class="new-space-icon">
+                                        <i class="fas fa-plus-circle" aria-hidden="true"></i>
+                                    </div>
+                                    <h3>Create New Space</h3>
+                                    <p>Start a new collaborative workspace for your projects</p>
+                                </div>
+                                <a href="./spaces/create" class="create-space-btn">Get Started</a>
+                            </article>
+                        </div>
+
+                        <button class="carousel-nav next" aria-label="Next spaces"><i class="fas fa-chevron-right"
+                                aria-hidden="true"></i></button>
+                    </div>
+                </section>
+
+                <!-- Resources & Recommendations -->
+                <section class="resources-section">
+                    <div class="section-header">
+                        <h2>Resources & Recommendations</h2>
+                        <div class="resources-tabs">
+                            <button class="tab-btn active" data-tab="recommended">Recommended</button>
+                            <button class="tab-btn" data-tab="popular">Popular</button>
+                            <button class="tab-btn" data-tab="new">New</button>
+                        </div>
+                    </div>
+
+                    <div class="resources-grid">
+                        <article class="resource-card">
+                            <div class="resource-icon"><i class="fas fa-book" aria-hidden="true"></i></div>
+                            <div class="resource-content">
+                                <h3>Space Management Guide</h3>
+                                <p>Learn how to effectively organize your digital workspace for maximum productivity.
+                                </p>
+                                <div class="resource-meta">
+                                    <span class="resource-type">Guide</span>
+                                    <span class="read-time">5 min read</span>
+                                </div>
+                            </div>
+                            <a href="./resources/space-management" class="resource-link">View Resource</a>
+                        </article>
+
+                        <article class="resource-card">
+                            <div class="resource-icon"><i class="fas fa-video" aria-hidden="true"></i></div>
+                            <div class="resource-content">
+                                <h3>Event Planning Tutorial</h3>
+                                <p>Step-by-step guide to creating successful virtual and hybrid events.</p>
+                                <div class="resource-meta">
+                                    <span class="resource-type">Video</span>
+                                    <span class="video-length">12:34</span>
+                                </div>
+                            </div>
+                            <a href="./resources/event-planning" class="resource-link">Watch Video</a>
+                        </article>
+
+                        <article class="resource-card">
+                            <div class="resource-icon"><i class="fas fa-file-alt" aria-hidden="true"></i></div>
+                            <div class="resource-content">
+                                <h3>Engagement Strategies</h3>
+                                <p>Proven techniques to boost participation and interaction in your digital spaces.</p>
+                                <div class="resource-meta">
+                                    <span class="resource-type">Article</span>
+                                    <span class="read-time">8 min read</span>
+                                </div>
+                            </div>
+                            <a href="./resources/engagement-strategies" class="resource-link">Read Article</a>
+                        </article>
+
+                        <article class="resource-card">
+                            <div class="resource-icon"><i class="fas fa-file-download" aria-hidden="true"></i></div>
+                            <div class="resource-content">
+                                <h3>Collaboration Templates</h3>
+                                <p>Ready-to-use templates for team collaboration and project management.</p>
+                                <div class="resource-meta">
+                                    <span class="resource-type">Templates</span>
+                                    <span class="template-count">5 items</span>
+                                </div>
+                            </div>
+                            <a href="./resources/collaboration-templates" class="resource-link">Download</a>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Community Highlights -->
+                <section class="community-highlights">
+                    <div class="section-header">
+                        <h2>Community Highlights</h2>
+                        <a href="./community" class="view-all">Explore Community <i class="fas fa-arrow-right"
+                                aria-hidden="true"></i></a>
+                    </div>
+
+                    <div class="community-showcase">
+                        <article class="community-space-card">
+                            <div class="space-banner">
+                                <img src="../media/community-space-1.webp" alt="Innovation Hub community space"
+                                    class="space-image">
+                                <div class="space-badge">Featured</div>
+                            </div>
+                            <div class="space-details">
+                                <h3>Innovation Hub</h3>
+                                <p>A collaborative space for tech enthusiasts to share ideas and prototypes</p>
+                                <div class="space-stats">
+                                    <span class="members-count"><i class="fas fa-users" aria-hidden="true"></i> 234
+                                        members</span>
+                                    <span class="activity-level"><i class="fas fa-bolt" aria-hidden="true"></i> Very
+                                        active</span>
+                                </div>
+                                <div class="space-topics">
+                                    <span class="topic-tag">Technology</span>
+                                    <span class="topic-tag">Innovation</span>
+                                    <span class="topic-tag">Startups</span>
+                                </div>
+                            </div>
+                            <div class="space-footer">
+                                <a href="./community/innovation-hub" class="visit-btn">Visit Space</a>
+                                <button class="follow-btn"><i class="fas fa-plus" aria-hidden="true"></i>
+                                    Follow</button>
+                            </div>
+                        </article>
+
+                        <article class="community-space-card">
+                            <div class="space-banner">
+                                <img src="../media/community-space-2.webp" alt="Digital Creators community space"
+                                    class="space-image">
+                                <div class="space-badge">Trending</div>
+                            </div>
+                            <div class="space-details">
+                                <h3>Digital Creators</h3>
+                                <p>Where designers, artists, and creators share their work and get feedback</p>
+                                <div class="space-stats">
+                                    <span class="members-count"><i class="fas fa-users" aria-hidden="true"></i> 178
+                                        members</span>
+                                    <span class="activity-level"><i class="fas fa-bolt" aria-hidden="true"></i>
+                                        Active</span>
+                                </div>
+                                <div class="space-topics">
+                                    <span class="topic-tag">Design</span>
+                                    <span class="topic-tag">Art</span>
+                                    <span class="topic-tag">Digital</span>
+                                </div>
+                            </div>
+                            <div class="space-footer">
+                                <a href="./community/digital-creators" class="visit-btn">Visit Space</a>
+                                <button class="follow-btn"><i class="fas fa-plus" aria-hidden="true"></i>
+                                    Follow</button>
+                            </div>
+                        </article>
+
+                        <article class="community-space-card">
+                            <div class="space-banner">
+                                <img src="../media/community-space-3.webp" alt="Entrepreneur Network community space"
+                                    class="space-image">
+                            </div>
+                            <div class="space-details">
+                                <h3>Entrepreneur Network</h3>
+                                <p>Connect with fellow entrepreneurs and business owners for networking and advice</p>
+                                <div class="space-stats">
+                                    <span class="members-count"><i class="fas fa-users" aria-hidden="true"></i> 315
+                                        members</span>
+                                    <span class="activity-level"><i class="fas fa-bolt" aria-hidden="true"></i> Very
+                                        active</span>
+                                </div>
+                                <div class="space-topics">
+                                    <span class="topic-tag">Business</span>
+                                    <span class="topic-tag">Networking</span>
+                                    <span class="topic-tag">Growth</span>
+                                </div>
+                            </div>
+                            <div class="space-footer">
+                                <a href="./community/entrepreneur-network" class="visit-btn">Visit Space</a>
+                                <button class="follow-btn"><i class="fas fa-plus" aria-hidden="true"></i>
+                                    Follow</button>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Help & Support -->
+                <section class="help-support">
+                    <div class="help-container">
+                        <div class="help-icon">
+                            <i class="fas fa-headset" aria-hidden="true"></i>
+                        </div>
+                        <div class="help-content">
+                            <h2>Need Help?</h2>
+                            <p>Our support team is available 24/7 to assist you with any questions or issues.</p>
+                            <div class="help-actions">
+                                <a href="./support" class="help-btn primary">Contact Support</a>
+                                <a href="./help-center" class="help-btn secondary">Visit Help Center</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- App Notifications -->
+            <div class="notifications-panel" id="notificationsPanel" hidden>
+                <div class="notifications-header">
+                    <h3>Notifications</h3>
+                    <div class="notifications-actions">
+                        <button class="mark-all-read">Mark all as read</button>
+                        <button class="notifications-settings"><i class="fas fa-cog" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+                <div class="notifications-tabs">
+                    <button class="tab-btn active" data-tab="all">All</button>
+                    <button class="tab-btn" data-tab="unread">Unread <span class="count">3</span></button>
+                    <button class="tab-btn" data-tab="mentions">Mentions</button>
+                </div>
+                <ul class="notifications-list">
+                    <li class="notification-item unread">
+                        <div class="notification-icon"><i class="fas fa-user-plus" aria-hidden="true"></i></div>
+                        <div class="notification-content">
+                            <p><strong>Emily Chang</strong> started following your space <strong>My Startup</strong></p>
+                            <time datetime="2025-05-17T13:45:00">5 minutes ago</time>
+                        </div>
+                        <button class="notification-action" aria-label="Mark as read"><i class="fas fa-circle"
+                                aria-hidden="true"></i></button>
+                    </li>
+                    <li class="notification-item unread">
+                        <div class="notification-icon"><i class="fas fa-comment" aria-hidden="true"></i></div>
+                        <div class="notification-content">
+                            <p><strong>Mark Wilson</strong> commented on your event <strong>Beta Launch</strong></p>
+                            <time datetime="2025-05-17T11:50:00">2 hours ago</time>
+                        </div>
+                        <button class="notification-action" aria-label="Mark as read"><i class="fas fa-circle"
+                                aria-hidden="true"></i></button>
+                    </li>
+                    <li class="notification-item unread">
+                        <div class="notification-icon"><i class="fas fa-calendar-check" aria-hidden="true"></i></div>
+                        <div class="notification-content">
+                            <p>Reminder: <strong>Product Launch</strong> event starts tomorrow at 2:00 PM</p>
+                            <time datetime="2025-05-17T09:00:00">8 hours ago</time>
+                        </div>
+                        <button class="notification-action" aria-label="Mark as read"><i class="fas fa-circle"
+                                aria-hidden="true"></i></button>
+                    </li>
+                    <li class="notification-item">
+                        <div class="notification-icon"><i class="fas fa-heart" aria-hidden="true"></i></div>
+                        <div class="notification-content">
+                            <p><strong>5 people</strong> liked your project update</p>
+                            <time datetime="2025-05-16T14:30:00">Yesterday</time>
+                        </div>
+                        <button class="notification-action" aria-label="Remove notification"><i class="fas fa-times"
+                                aria-hidden="true"></i></button>
+                    </li>
+                    <li class="notification-item">
+                        <div class="notification-icon"><i class="fas fa-award" aria-hidden="true"></i></div>
+                        <div class="notification-content">
+                            <p>Congratulations! Your space <strong>Creative Lab</strong> reached 100 followers</p>
+                            <time datetime="2025-05-15T16:20:00">2 days ago</time>
+                        </div>
+                        <button class="notification-action" aria-label="Remove notification"><i class="fas fa-times"
+                                aria-hidden="true"></i></button>
+                    </li>
+                </ul>
+                <div class="notifications-footer">
+                    <a href="./notifications">View All Notifications</a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../media/CLespacios-logo-positive.webp" alt="CLespacios Logo" width="160" height="40">
+                <p>Your digital space to connect, collaborate and grow.</p>
+                <div class="app-download">
+                    <p>Get our mobile app:</p>
+                    <div class="app-buttons">
+                        <a href="../app/ios" class="app-store-badge">
+                            <img src="../media/app-store-badge.webp" alt="Download on the App Store" width="120" height="40">
+                        </a>
+                        <a href="../app/android" class="play-store-badge">
+                            <img src="../media/play-store-badge.webp" alt="Get it on Google Play" width="135" height="40">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="../features">Features</a></li>
+                        <li><a href="../pricing">Pricing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="../about">About Us</a></li>
+                        <li><a href="../contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="../terms">Terms of Service</a></li>
+                        <li><a href="../privacy">Privacy Policy</a></li>
+                        <li><a href="../cookies">Cookie Policy</a></li>
+                        <li><a href="../security">Security</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="language-selector">
+                <label for="footer-language">Language:</label>
+                <select name="footer-language" id="footer-language">
+                    <option value="en" selected>English</option>
+                    <option value="es">Español</option>
+                </select>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://twitter.com/clespacios" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                <a href="https://instagram.com/clespacios" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://www.youtube.com/clespacios" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                <a href="https://www.tiktok.com/@clespacios" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
+            </div>
+            
+            <p class="copyright">&copy; 2025 CLespacios Technologies, Inc. All rights reserved.</p>
+            
+            <div class="compliance-badges">
+                <span class="compliance-badge">
+                    <i class="fas fa-shield-alt" aria-hidden="true"></i> ISO 27001 Certified
+                </span>
+                <span class="compliance-badge">
+                    <i class="fas fa-lock" aria-hidden="true"></i> GDPR Compliant
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-content">
+            <h3>Cookie Preferences</h3>
+            <p>We use cookies to enhance your browsing experience, analyze site traffic, and personalize content. By
+                clicking "Accept All", you consent to our use of cookies.</p>
+            <div class="cookie-actions">
+                <button class="cookie-btn secondary" id="cookieSettings">Customize Settings</button>
+                <button class="cookie-btn primary" id="acceptAllCookies">Accept All</button>
+            </div>
+        </div>
+    </div>
+    <script src="../../private/js/footer.js"></script>
+</body>
+
+</html>

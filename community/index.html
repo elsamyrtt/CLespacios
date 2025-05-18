@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Discover events, projects, and startups on Clespacios - a digital space management platform for communities, collaboration and networking.">
+    <meta name="keywords"
+        content="Clespacios, digital space, subscription, user space management, events, projects, startups, feedback, communication, user interaction, premium tools, custom forms, chat system, community, discover companies, networking, collaboration, product launch platform">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Clespacios">
+    <title>Clespacios | Community</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J9F90B4R6F"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-J9F90B4R6F');
+    </script>
+    <link id="favicon" rel="icon" href="../media/CLespacios-logo-positive.webp" type="image/webp">
+    <link rel="alternate" hreflang="es" href="https://clespacios.com/es/community">
+    <link rel="alternate" hreflang="x-default" href="https://clespacios.com/community">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="../../private/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"><script>
+  function setFavicon(isDark) {
+    const existing = document.getElementById('favicon');
+    if (existing) {
+      existing.remove(); 
+    }
+
+    const newFavicon = document.createElement('link');
+    newFavicon.id = 'favicon';
+    newFavicon.rel = 'icon';
+    newFavicon.type = 'image/webp';
+
+    const timestamp = `?v=${Date.now()}`;
+        newFavicon.href = isDark
+      ? `../media/CLespacios-logo-negative.webp${timestamp}`
+      : `../media/CLespacios-logo-positive.webp${timestamp}`;
+
+    document.head.appendChild(newFavicon);
+  }
+
+  const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+  setFavicon(darkScheme.matches);
+
+  darkScheme.addEventListener('change', e => setFavicon(e.matches));
+</script>
+
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <a href="../index.html" aria-label="Clespacios Home">
+                    <img src="../media/CLespacios-logo-negative.webp" alt="Clespacios Logo">
+                </a>
+            </div>
+            <form action="../search" method="get" class="search-form" role="search">
+                <label for="site-search" class="sr-only">Search spaces, events, or projects</label>
+                <input type="search" name="search" id="site-search" placeholder="Search spaces, events, or projects...">
+                <button type="submit" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></button>
+            </form>
+            <ul class="nav-links">
+                <li><a href="../community">Discover</a></li>
+                <li><a href="../signup">Account</a></li>
+                <li><a href="../pricing">Pricing</a></li>
+            </ul>
+            <button class="mobile-menu" aria-label="Toggle menu" aria-expanded="false">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="filters-section" aria-labelledby="filter-heading">
+            <h1 id="filter-heading" class="sr-only">Discover Community Content</h1>
+            
+            <div class="filter-container">
+                <div class="filter-tags" role="group" aria-label="Content filters">
+                    <div class="filter-tag">
+                        <input type="checkbox" id="event-checkbox" name="filter" value="event">
+                        <label for="event-checkbox">Event</label>
+                    </div>
+                    <div class="filter-tag">
+                        <input type="checkbox" id="startup-checkbox" name="filter" value="startup">
+                        <label for="startup-checkbox">Startup</label>
+                    </div>
+                    <div class="filter-tag">
+                        <input type="checkbox" id="design-checkbox" name="filter" value="design">
+                        <label for="design-checkbox">Design</label>
+                    </div>
+                    <div class="filter-tag">
+                        <input type="checkbox" id="local-checkbox" name="filter" value="local">
+                        <label for="local-checkbox">Local</label>
+                    </div>
+                    <div class="filter-tag">
+                        <input type="checkbox" id="technology-checkbox" name="filter" value="technology">
+                        <label for="technology-checkbox">Technology</label>
+                    </div>
+                    <div class="filter-tag">
+                        <input type="checkbox" id="music-event-checkbox" name="filter" value="music">
+                        <label for="music-event-checkbox">Music</label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="view-options">
+            <button class="view-btn active" id="grid-view" aria-label="View as grid">
+                <i class="fas fa-th-large" aria-hidden="true"></i> Grid
+            </button>
+            <button class="view-btn" id="list-view" aria-label="View as list">
+                <i class="fas fa-list" aria-hidden="true"></i> List
+            </button>
+        </div>
+
+        <section class="card-container" aria-labelledby="cards-heading">
+            <h2 id="cards-heading" class="sr-only">Events, Projects and Startups</h2>
+            
+            <div class="cards-grid" id="cards-container">
+                <!-- Card 1 -->
+                <article class="card">
+                    <a href="../event/tech-summit-2025" class="card-link">
+                        <div class="card-image-container">
+                            <img src="/api/placeholder/400/320" alt="Tech Summit 2025 event" class="card-image">
+                            <span class="card-badge">Event</span>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Tech Summit 2025</h3>
+                            <p class="card-description">Join tech leaders and innovators at the annual Tech Summit. Network with industry professionals and discover the latest technologies.</p>
+                            <div class="card-meta">
+                                <span><i class="far fa-calendar" aria-hidden="true"></i> May 20-22, 2025</span>
+                                <span><i class="fas fa-map-marker-alt" aria-hidden="true"></i> New York, USA</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                
+                <!-- Card 2 -->
+                <article class="card">
+                    <a href="../startup/ecoflow" class="card-link">
+                        <div class="card-image-container">
+                            <img src="/api/placeholder/400/320" alt="EcoFlow startup" class="card-image">
+                            <span class="card-badge">Startup</span>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">EcoFlow</h3>
+                            <p class="card-description">Revolutionizing sustainable energy solutions for urban environments. Our technology helps reduce carbon footprints while saving costs.</p>
+                            <div class="card-meta">
+                                <span><i class="fas fa-tag" aria-hidden="true"></i> Sustainability</span>
+                                <span><i class="fas fa-users" aria-hidden="true"></i> 12 members</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                
+                <!-- Card 3 -->
+                <article class="card">
+                    <a href="../project/design-workshop" class="card-link">
+                        <div class="card-image-container">
+                            <img src="/api/placeholder/400/320" alt="UX Design Workshop" class="card-image">
+                            <span class="card-badge">Workshop</span>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">UX Design Workshop</h3>
+                            <p class="card-description">Hands-on workshop for UX designers of all levels. Learn industry best practices and collaborative design techniques.</p>
+                            <div class="card-meta">
+                                <span><i class="far fa-calendar" aria-hidden="true"></i> June 15, 2025</span>
+                                <span><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Online</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                
+                <!-- Card 4 -->
+                <article class="card">
+                    <a href="../event/music-festival" class="card-link">
+                        <div class="card-image-container">
+                            <img src="/api/placeholder/400/320" alt="Summer Music Festival" class="card-image">
+                            <span class="card-badge">Music</span>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Summer Music Festival</h3>
+                            <p class="card-description">Three days of live music featuring top artists and emerging talent. Food, drinks, and unforgettable experiences.</p>
+                            <div class="card-meta">
+                                <span><i class="far fa-calendar" aria-hidden="true"></i> July 10-12, 2025</span>
+                                <span><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Miami, USA</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                
+                <!-- Card 5 -->
+                <article class="card">
+                    <a href="../startup/healthai" class="card-link">
+                        <div class="card-image-container">
+                            <img src="/api/placeholder/400/320" alt="HealthAI startup" class="card-image">
+                            <span class="card-badge">Startup</span>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">HealthAI</h3>
+                            <p class="card-description">AI-powered healthcare solutions making predictive diagnostics accessible. Partnering with clinics worldwide to improve patient outcomes.</p>
+                            <div class="card-meta">
+                                <span><i class="fas fa-tag" aria-hidden="true"></i> Health Tech</span>
+                                <span><i class="fas fa-users" aria-hidden="true"></i> 8 members</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                
+                <!-- Card 6 -->
+                <article class="card">
+                    <a href="../event/local-market" class="card-link">
+                        <div class="card-image-container">
+                            <img src="/api/placeholder/400/320" alt="Local Artisan Market" class="card-image">
+                            <span class="card-badge">Local</span>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Local Artisan Market</h3>
+                            <p class="card-description">Monthly market featuring local artists, craftspeople, and food vendors. Support your community and discover unique treasures.</p>
+                            <div class="card-meta">
+                                <span><i class="far fa-calendar" aria-hidden="true"></i> Monthly</span>
+                                <span><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Chicago, USA</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../media/CLespacios-logo-positive.webp" alt="CLespacios Logo" width="160" height="40">
+                <p>Your digital space to connect, collaborate and grow.</p>
+                <div class="app-download">
+                    <p>Get our mobile app:</p>
+                    <div class="app-buttons">
+                        <a href="../app/ios" class="app-store-badge">
+                            <img src="../media/app-store-badge.webp" alt="Download on the App Store" width="120" height="40">
+                        </a>
+                        <a href="../app/android" class="play-store-badge">
+                            <img src="../media/play-store-badge.webp" alt="Get it on Google Play" width="135" height="40">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="../features">Features</a></li>
+                        <li><a href="../pricing">Pricing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="../about">About Us</a></li>
+                        <li><a href="../contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="../terms">Terms of Service</a></li>
+                        <li><a href="../privacy">Privacy Policy</a></li>
+                        <li><a href="../cookies">Cookie Policy</a></li>
+                        <li><a href="../security">Security</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="language-selector">
+                <label for="footer-language">Language:</label>
+                <select name="footer-language" id="footer-language">
+                    <option value="en" selected>English</option>
+                    <option value="es">Español</option>
+                </select>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://twitter.com/clespacios" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                <a href="https://instagram.com/clespacios" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://www.youtube.com/clespacios" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                <a href="https://www.tiktok.com/@clespacios" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
+            </div>
+            
+            <p class="copyright">&copy; 2025 CLespacios Technologies, Inc. All rights reserved.</p>
+            
+            <div class="compliance-badges">
+                <span class="compliance-badge">
+                    <i class="fas fa-shield-alt" aria-hidden="true"></i> ISO 27001 Certified
+                </span>
+                <span class="compliance-badge">
+                    <i class="fas fa-lock" aria-hidden="true"></i> GDPR Compliant
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-content">
+            <h3>Cookie Preferences</h3>
+            <p>We use cookies to enhance your browsing experience, analyze site traffic, and personalize content. By
+                clicking "Accept All", you consent to our use of cookies.</p>
+            <div class="cookie-actions">
+                <button class="cookie-btn secondary" id="cookieSettings">Customize Settings</button>
+                <button class="cookie-btn primary" id="acceptAllCookies">Accept All</button>
+            </div>
+        </div>
+    </div>
+    <script src="../../private/js/footer.js"></script>
+</body>
+
+</html>

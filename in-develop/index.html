@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Clespacios">
+    <title>Clespacios | In Development</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J9F90B4R6F"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-J9F90B4R6F');
+    </script>
+    <link rel="stylesheet" href="../../private/css/style.css">
+    <link id="favicon" rel="icon" href="../media/CLespacios-logo-positive.webp" type="image/webp">
+    <link rel="alternate" hreflang="es" href="https://www.clespacios.com/es/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.clespacios.com/" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="../../private/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"><script>
+  function setFavicon(isDark) {
+    const existing = document.getElementById('favicon');
+    if (existing) {
+      existing.remove(); 
+    }
+
+    const newFavicon = document.createElement('link');
+    newFavicon.id = 'favicon';
+    newFavicon.rel = 'icon';
+    newFavicon.type = 'image/webp';
+
+    const timestamp = `?v=${Date.now()}`;
+        newFavicon.href = isDark
+      ? `../media/CLespacios-logo-negative.webp${timestamp}`
+      : `../media/CLespacios-logo-positive.webp${timestamp}`;
+
+    document.head.appendChild(newFavicon);
+  }
+
+  const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+  setFavicon(darkScheme.matches);
+
+  darkScheme.addEventListener('change', e => setFavicon(e.matches));
+</script>
+    <link rel="preload" href="../../private/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="../../private/css/style.css">
+    </noscript>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <a href="../index.html">
+                    <img src="../media/CLespacios-logo-negative.webp" alt="Clespacios Logo">
+                </a>
+            </div>
+            <form action="../search" method="get" class="search-form">
+                <input type="text" name="search" id="search" placeholder="Search spaces, events, or projects...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+            <ul class="nav-links">
+                <li><a href="../community">Discover</a></li>
+                <li><a href="../signup">Account</a></li>
+                <li><a href="../pricing">Pricing</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1>We're putting in a lot of effort to develop this page</h1>
+        <a class="btn primary-btn" href="../">Go To Principal</a>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../media/CLespacios-logo-positive.webp" alt="CLespacios Logo" width="160" height="40">
+                <p>Your digital space to connect, collaborate and grow.</p>
+                <div class="app-download">
+                    <p>Get our mobile app:</p>
+                    <div class="app-buttons">
+                        <a href="../app/ios" class="app-store-badge">
+                            <img src="../media/app-store-badge.webp" alt="Download on the App Store" width="120" height="40">
+                        </a>
+                        <a href="../app/android" class="play-store-badge">
+                            <img src="../media/play-store-badge.webp" alt="Get it on Google Play" width="135" height="40">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="../features">Features</a></li>
+                        <li><a href="../pricing">Pricing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="../about">About Us</a></li>
+                        <li><a href="../contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="../terms">Terms of Service</a></li>
+                        <li><a href="../privacy">Privacy Policy</a></li>
+                        <li><a href="../cookies">Cookie Policy</a></li>
+                        <li><a href="../security">Security</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="language-selector">
+                <label for="footer-language">Language:</label>
+                <select name="footer-language" id="footer-language">
+                    <option value="en" selected>English</option>
+                    <option value="es">Español</option>
+                </select>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://twitter.com/clespacios" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                <a href="https://instagram.com/clespacios" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://www.youtube.com/clespacios" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                <a href="https://www.tiktok.com/@clespacios" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
+            </div>
+            
+            <p class="copyright">&copy; 2025 CLespacios Technologies, Inc. All rights reserved.</p>
+            
+            <div class="compliance-badges">
+                <span class="compliance-badge">
+                    <i class="fas fa-shield-alt" aria-hidden="true"></i> ISO 27001 Certified
+                </span>
+                <span class="compliance-badge">
+                    <i class="fas fa-lock" aria-hidden="true"></i> GDPR Compliant
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-content">
+            <h3>Cookie Preferences</h3>
+            <p>We use cookies to enhance your browsing experience, analyze site traffic, and personalize content. By
+                clicking "Accept All", you consent to our use of cookies.</p>
+            <div class="cookie-actions">
+                <button class="cookie-btn secondary" id="cookieSettings">Customize Settings</button>
+                <button class="cookie-btn primary" id="acceptAllCookies">Accept All</button>
+            </div>
+        </div>
+    </div>
+    <script src="../../private/js/footer.js"></script>
+</body>
+
+</html>
